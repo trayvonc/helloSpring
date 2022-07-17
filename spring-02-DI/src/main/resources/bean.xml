@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean id="address" class="com.fan.pojo.Address">
+            <property name="address" value="xian"></property>
+        </bean>
+        <bean id="student" class="com.fan.pojo.Student">
+            <property name="name" value="trayvon"></property>
+            <property name="address" ref="address"/>
+            <property name="books">
+                <array>
+                    <value>红楼梦</value>
+                    <value>西游记</value>
+                    <value>三国演义</value>
+                </array>
+            </property>
+            <property name="hobby">
+                <list>
+                    <value>听歌</value>
+                    <value>敲代码</value>
+                    <value>听音乐</value>
+                </list>
+            </property>
+            <property name="card">
+                <map>
+                    <entry key="身份证" value="11111"/>
+                    <entry key="银行卡" value="33333"/>
+                </map>
+            </property>
+            <property name="games">
+                <set>
+                    <value>LOL</value>
+                    <value>OW</value>
+                </set>
+            </property>
+            <property name="wife">
+                <null></null>
+            </property>
+            <property name="info">
+                <props>
+                    <prop key="学号">sx2016128</prop>
+                    <prop key="性别">男</prop>
+                </props>
+            </property>
+        </bean>
+        </beans>
